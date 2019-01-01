@@ -1,0 +1,11 @@
+<div class="card-body">
+    <div class="list-group">
+        <a href="#" class="list-group-item clearfix d-block" *ngFor="let timeline of timelines">
+            <i class="fa fa-comment fa-fw"></i> {{timeline.username}} bought {{timeline.titleGame}}
+            <span class="float-right text-muted small"><em>{{timeline.purchaseDate}}</em></span>
+        </a>
+       
+    </div>
+    <!-- /.list-group -->
+    <a href="#" class="btn btn-default btn-block">View All Alerts</a>
+</div>

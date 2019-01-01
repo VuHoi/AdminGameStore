@@ -1,0 +1,42 @@
+<div [@routerTransition]>
+    <app-page-header [heading]="'User'" [icon]="'fa-table'"></app-page-header>
+    <div class="row">
+        <div class="col ">
+            <div class="card mb-3">
+                <div class="card-header">
+                  Users
+                </div>
+                <div class="card-body table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Full Name</th>
+                                <th>User Name</th>
+                                <th>Email</th>
+                                <th>Money</th>
+                                <th class="text-left">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let user of users;let i=index">
+                                <th scope="row">{{i}}</th>
+                                <td>{{user.fullName}}</td>
+                                <td>{{user.userName}}</td>
+                                <td>{{user.email}}</td>
+                                <td>{{user.money}}</td>
+                                <td class="text-left">
+                                    <button type="button" (click)="delete(i)" class="btn btn-danger float-left">Delete</button>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+      
+    
+</div>
+

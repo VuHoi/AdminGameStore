@@ -1,0 +1,57 @@
+<div [@routerTransition]>
+        <h2 class="text-muted">Dashboard <small>Game Store Overview</small></h2>
+        <div class="row">
+            <div class="col-md-12">
+                <ngb-carousel>
+                    <ng-template ngbSlide *ngFor="let slider of sliders">
+                        <img class="img-fluid mx-auto d-block" [src]="slider.imagePath" alt="Random first slide" width="100%">
+                        <div class="carousel-caption">
+                            <h3>{{slider.label}}</h3>
+                            <p>{{slider.text}}</p>
+                        </div>
+                    </ng-template>
+                </ngb-carousel>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-xl-6 col-lg-6">
+                <app-stat [bgClass]="'primary'" [routerLink]="['/tables']" [icon]="'fa-comments'" [count]="26" [label]="'User'" ></app-stat>
+            </div>
+            <div class="col-xl-6 col-lg-6">
+                <app-stat [bgClass]="'warning'" [routerLink]="['/forms']" [icon]="'fa-tasks'" [count]="12" [label]="'Publisher'" ></app-stat>
+            </div>
+        </div>
+        <hr />
+        <hr />
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="card card-default">
+                    <div class="card-header">
+                        <i class="fa fa-clock-o fa-fw"></i> Timeline
+                    </div>
+                    <!-- /.card-header -->
+                    <app-timeline></app-timeline>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+            </div>
+            <!-- /.col-lg-8 -->
+            <div class="col-lg-4">
+                <div class="card card-default mb-3">
+                    <div class="card-header">
+                        <i class="fa fa-bell fa-fw"></i> Notifications
+                    </div>
+                    <!-- /.card-header -->
+                    <app-notification></app-notification>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+    
+                <app-chat></app-chat>
+                <!-- /.card .chat-card -->
+            </div>
+            <!-- /.col-lg-4 -->
+        </div>
+    </div>
+    
